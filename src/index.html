@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+
+    <div ng-controller="VisaController" ng-app="h1bvisas">
+
+      <header>
+        <a class="logo" href="http://www.sfchronicle.com">
+          <img src="./assets/sf_logo_black.png">
+        </a>
+      </header>
+
+      <div class="divider-container">
+        <div class="top divider"></div>
+        <div class="top divider-text">In-depth report</div>
+      </div>
+
+      <div class="title-container">
+        <div class="title">H1-B Visas</div>
+      </div>
+
+      <div id="social">
+        <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A//projects.sfchronicle.com/2016/visas&amp;text=Check out our great investigative journalism.">
+      		<i class="fa fa-twitter"></i>
+      	</a>
+        <a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2Fvisas%2F', 'facebook-share-dialog', 'width=626,height=436'); return false;">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a id="mail-icon" href="mailto:?subject=H1BVisas - San Francisco Chronicle special report.&body=http://projects.sfchronicle.com/2016/visas">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="byline">By Joaquin Palomino and Emma O'Neill</div>
+      <div class="byline">April 22, 2015</div>
+
+      <div class="outer">
+
+          <div class="chart-hed">
+            Where foreign professionals working in the US came from in <span class="info"></span>
+          </div>
+
+        <div class="chart">
+
+          <div class="dropdown">
+            Choose a year:
+            <select name="select">
+              <option selected="selected" disabled="disabled">--</option>
+              <% for (var i = 2014; i > 1996; i--) { %>
+                <option value= <%= i %> > <%= i %> </option>
+              <% } %>
+            </select>
+
+            <div class="controls">
+              <div class="start selected"><i class="fa fa-play"></i></div>
+              <div class="pause"><i class="fa fa-pause"></i></div>
+            </div>
+          </div>
+
+          <div class="bubbles">
+            <div class="tooltip"></div>
+          </div>
+
+          <div class="legend-container">
+            <div class="legend">Continent Key</div>
+            <div class="legend-element"><div class="europe swatch"></div><div class="key">Europe</div></div>
+            <div class="legend-element"><div class="asia swatch"></div><div class="key">Asia</div></div>
+            <div class="legend-element"><div class="namerica swatch"></div><div class="key">North America</div></div>
+            <div class="legend-element"><div class="samerica swatch"></div><div class="key">South America</div></div>
+            <div class="legend-element"><div class="oceania swatch"></div><div class="key">Oceania</div></div>
+          </div>
+
+          <div class="note">Hover over or click on a bubble for more information.</div>
+        </div>
+
+        <div class="source">
+          <em>Source: This is the source</em>
+        </div>
+        <div class="credit">Emma O'Neill  & Joaquin Palomino / San Francisco Chronicle</div>
+      </div>
+
+
+      <div class="bars-hed">LCAs by Company</div>
+
+        <div class="chatter">Outsourcing companies inundate the something with LCA requests. Click on the headings to see how successful this strategy is for them and re-sort the lists.</div>
+
+        <div class="lcas-chart-container">
+
+          <div class="button-container">
+
+            <div class="button workers"
+            ng-click="selectedTable = 'workers'; sortTable('order1')"
+            ng-class="{active:selectSort == 'order1',
+                      up: lastSort == 'order1' && sortOrder == -1,
+                      down: lastSort == 'order1' && sortOrder == 1 }">Workers requested</div>
+            <div class="button lcas"
+            ng-click="selectedTable = 'lcas'; sortTable('order2')"
+            ng-class="{active:selectSort == 'order2',
+                      up: lastSort == 'order2' && sortOrder == -1,
+                      down: lastSort == 'order2' && sortOrder == 1 }">LCAs filed</div>
+
+          </div>
+
+          <div class="legend">
+            <div class="private-swath"><div class="text">Private companies</div></div>
+            <div class="US-swath"><div class="text">US-based outsourcing firm</div></div>
+            <div class="India-swath"><div class="text">India-based outsourcing firm</div></div>
+            <div class="foreign-swath"><div class="text">Foreign-based outsourcing firm</div></div>
+          </div>
+
+          <div class="workers-chart" ng-repeat="co in bycompany"
+          ng-class="{'active':selectedTable == 'workers'}">
+            <div class="bar-title">{{co.company}}</div>
+              <div class="bar-container">
+                <div class="workers-bar {{co.company_description}}"
+                  ng-style="{ width: {{co.workers_requested/max_len_workers*100}} + '%' }">
+                  <div class="workers-text {{co.company}}">{{co.workers_requested}}</div></div>
+              </div>
+          </div>
+
+          <div class="lcas-chart" ng-repeat="co in bycompany"
+          ng-class="{'active':selectedTable == 'lcas'}">
+            <div class="bar-title">{{co.company}}</div>
+              <div class="bar-container">
+                <div class="filed-bar {{co.company_description}}"
+                  ng-style="{ width: {{co.lca_filed/max_len_lcas*100}} + '%' }">
+                  <div class="lca-text {{co.company}}">{{co.lca_filed}}</div></div>
+              </div>
+          </div>
+
+        </div>
+
+        <div class="source">
+          <em>Source: This is the source</em>
+        </div>
+
+
+        <div class="outer">
+
+          <div class="chart-hed">
+            Where are visa holders in demand?
+          </div>
+
+          <div class="chatter">
+            We map each visa application request in a county by an employer for a given position. Roll over the graph to see what positions employers want to fill with H1-B visa holders.
+          </div>
+
+          <div class="divider-div"></div>
+
+          <div class="sankey-header">
+            <div class="hed1">visas requested by County</div>
+            <div class="hed2">by Company</div>
+            <div class="hed3">for Salary</div>
+          </div>
+
+          <div id="sankey-graph"></div>
+
+          <div class="source">
+            <em>Source: This is the source</em>
+          </div>
+          <div class="credit">Emma O'Neill & Joaquin Palomino / San Francisco Chronicle</div>
+      </div>
+
+      <div class="credits">
+          <div class="entry">Joaquin Palomino  &bull; <a>jpalomino@sfchronicle.com</a></div>
+          <div class="entry">Emma O'Neill  &bull; <a>eoneill@sfchronicle.com</a></div>
+      </div>
+
+      <footer>
+        <a class="logo" href="http://www.sfchronicle.com">
+          <img src="./assets/sf_logo_white.png">
+        </a>
+      </footer>
+
+    </div>
+
+
+    </responsive-child>
+
+    <script>
+      var bycompany = <%= JSON.stringify(csv.lca_by_company) %>
+      var h1bData = <%= JSON.stringify(csv.final_data) %>;
+      var visaData = <%= JSON.stringify(csv.visa_data) %>;
+    </script>
+
+    <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_foot.html") %>
+    <%= t.include("partials/_helloSFC.html") %>
+  </body>
+</html>

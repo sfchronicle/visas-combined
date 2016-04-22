@@ -1,0 +1,359 @@
+Year,Geography,Visas,Continent,Abbreviation
+2001,Russia,2167,Europe,Russ.
+2000,Russia,1945,Europe,Russ.
+1999,Russia,1619,Europe,Russ.
+2004,Russia,1484,Europe,Russ.
+1998,Russia,1395,Europe,Russ.
+1997,Russia,1357,Europe,Russ.
+2002,Russia,1336,Europe,Russ.
+2005,Russia,1240,Europe,Russ.
+2006,Russia,1203,Europe,Russ.
+2003,Russia,1194,Europe,Russ.
+2007,Russia,1150,Europe,Russ.
+2012,Russia,914,Europe,Russ.
+2011,Russia,883,Europe,Russ.
+2013,Russia,878,Europe,Russ.
+2008,Russia,752,Europe,Russ.
+2014,Russia,735,Europe,Russ.
+2009,Russia,695,Europe,Russ.
+2010,Russia,692,Europe,Russ.
+2001,Philippines,4470,Asia,Phil.
+2007,Philippines,4279,Asia,Phil.
+2008,Philippines,3998,Asia,Phil.
+2009,Philippines,3676,Asia,Phil.
+2004,Philippines,3467,Asia,Phil.
+2002,Philippines,3387,Asia,Phil.
+2010,Philippines,3173,Asia,Phil.
+2000,Philippines,3102,Asia,Phil.
+1999,Philippines,3064,Asia,Phil.
+2003,Philippines,3027,Asia,Phil.
+2005,Philippines,2849,Asia,Phil.
+2006,Philippines,2823,Asia,Phil.
+1998,Philippines,2759,Asia,Phil.
+1997,Philippines,2653,Asia,Phil.
+2011,Philippines,2369,Asia,Phil.
+2013,Philippines,2160,Asia,Phil.
+2012,Philippines,2026,Asia,Phil.
+2014,Philippines,1700,Asia,Phil.
+2001,Pakistan,2903,Asia,Pak.
+2000,Pakistan,2295,Asia,Pak.
+1999,Pakistan,1933,Asia,Pak.
+1998,Pakistan,1509,Asia,Pak.
+2006,Pakistan,1293,Asia,Pak.
+2004,Pakistan,1279,Asia,Pak.
+2007,Pakistan,1233,Asia,Pak.
+2002,Pakistan,1227,Asia,Pak.
+1997,Pakistan,1144,Asia,Pak.
+2005,Pakistan,1117,Asia,Pak.
+2003,Pakistan,1017,Asia,Pak.
+2008,Pakistan,926,Asia,Pak.
+2009,Pakistan,838,Asia,Pak.
+2010,Pakistan,693,Asia,Pak.
+2014,Pakistan,670,Asia,Pak.
+2013,Pakistan,636,Asia,Pak.
+2012,Pakistan,613,Asia,Pak.
+2011,Pakistan,592,Asia,Pak.
+2013,Mexico,3686,North America,Mexico
+2012,Mexico,3543,North America,Mexico
+2014,Mexico,3243,North America,Mexico
+2004,Mexico,3016,North America,Mexico
+2002,Mexico,2990,North America,Mexico
+2001,Mexico,2915,North America,Mexico
+2007,Mexico,2905,North America,Mexico
+1997,Mexico,2785,North America,Mexico
+2006,Mexico,2699,North America,Mexico
+2003,Mexico,2664,North America,Mexico
+2011,Mexico,2647,North America,Mexico
+2005,Mexico,2505,North America,Mexico
+2010,Mexico,2494,North America,Mexico
+2008,Mexico,2421,North America,Mexico
+1999,Mexico,2418,North America,Mexico
+2000,Mexico,2404,North America,Mexico
+1998,Mexico,2320,North America,Mexico
+2009,Mexico,2190,North America,Mexico
+2001,Malaysia,1411,Asia,Mal.
+2000,Malaysia,1251,Asia,Mal.
+2004,Malaysia,1050,Asia,Mal.
+2006,Malaysia,967,Asia,Mal.
+2005,Malaysia,967,Asia,Mal.
+2007,Malaysia,926,Asia,Mal.
+1999,Malaysia,907,Asia,Mal.
+2002,Malaysia,891,Asia,Mal.
+2008,Malaysia,709,Asia,Mal.
+2010,Malaysia,648,Asia,Mal.
+2009,Malaysia,603,Asia,Mal.
+1998,Malaysia,564,Asia,Mal.
+2011,Malaysia,556,Asia,Mal.
+2003,Malaysia,549,Asia,Mal.
+1997,Malaysia,534,Asia,Mal.
+2012,Malaysia,523,Asia,Mal.
+2013,Malaysia,493,Asia,Mal.
+2014,Malaysia,443,Asia,Mal.
+2006,South Korea,3924,Asia,S. Korea
+2005,South Korea,3838,Asia,S. Korea
+2007,South Korea,3788,Asia,S. Korea
+2010,South Korea,3656,Asia,S. Korea
+2011,South Korea,3501,Asia,S. Korea
+2004,South Korea,3422,Asia,S. Korea
+2008,South Korea,3257,Asia,S. Korea
+2009,South Korea,3233,Asia,S. Korea
+2012,South Korea,3131,Asia,S. Korea
+2013,South Korea,3000,Asia,S. Korea
+2002,South Korea,2989,Asia,S. Korea
+2001,South Korea,2899,Asia,S. Korea
+2003,South Korea,2892,Asia,S. Korea
+2014,South Korea,2727,Asia,S. Korea
+2000,South Korea,2296,Asia,S. Korea
+1999,South Korea,1911,Asia,S. Korea
+1998,South Korea,940,Asia,S. Korea
+1997,South Korea,900,Asia,S. Korea
+2004,Japan,4214,Asia,Japan
+2001,Japan,4096,Asia,Japan
+2005,Japan,4073,Asia,Japan
+2003,Japan,3836,Asia,Japan
+2006,Japan,3795,Asia,Japan
+2000,Japan,3781,Asia,Japan
+2002,Japan,3772,Asia,Japan
+2007,Japan,3516,Asia,Japan
+1999,Japan,3338,Asia,Japan
+1997,Japan,2929,Asia,Japan
+1998,Japan,2878,Asia,Japan
+2008,Japan,2610,Asia,Japan
+2009,Japan,2505,Asia,Japan
+2010,Japan,2430,Asia,Japan
+2011,Japan,2054,Asia,Japan
+2012,Japan,1907,Asia,Japan
+2013,Japan,1698,Asia,Japan
+2014,Japan,1369,Asia,Japan
+2001,Italy,1251,Europe,Italy
+2004,Italy,1219,Europe,Italy
+2012,Italy,1165,Europe,Italy
+2005,Italy,1125,Europe,Italy
+2002,Italy,1106,Europe,Italy
+2011,Italy,1095,Europe,Italy
+2006,Italy,1088,Europe,Italy
+2013,Italy,1086,Europe,Italy
+2010,Italy,1068,Europe,Italy
+2000,Italy,1050,Europe,Italy
+2014,Italy,1030,Europe,Italy
+2003,Italy,1005,Europe,Italy
+2007,Italy,974,Europe,Italy
+1999,Italy,970,Europe,Italy
+2009,Italy,867,Europe,Italy
+2008,Italy,865,Europe,Italy
+1998,Italy,833,Europe,Italy
+1997,Italy,806,Europe,Italy
+2004,Israel,1520,Asia,Is.
+2001,Israel,1454,Asia,Is.
+2005,Israel,1355,Asia,Is.
+2002,Israel,1350,Asia,Is.
+2003,Israel,1233,Asia,Is.
+2000,Israel,1223,Asia,Is.
+2006,Israel,1179,Asia,Is.
+2007,Israel,1075,Asia,Is.
+1999,Israel,1030,Asia,Is.
+1997,Israel,842,Asia,Is.
+2008,Israel,829,Asia,Is.
+1998,Israel,823,Asia,Is.
+2010,Israel,786,Asia,Is.
+2011,Israel,774,Asia,Is.
+2009,Israel,758,Asia,Is.
+2012,Israel,754,Asia,Is.
+2013,Israel,661,Asia,Is.
+2014,Israel,597,Asia,Is.
+2001,Indonesia,1462,Asia,Ind.
+2000,Indonesia,1241,Asia,Ind.
+2007,Indonesia,1007,Asia,Ind.
+2002,Indonesia,928,Asia,Ind.
+2006,Indonesia,890,Asia,Ind.
+2005,Indonesia,831,Asia,Ind.
+2008,Indonesia,783,Asia,Ind.
+2010,Indonesia,748,Asia,Ind.
+2009,Indonesia,694,Asia,Ind.
+2004,Indonesia,685,Asia,Ind.
+2011,Indonesia,674,Asia,Ind.
+1999,Indonesia,671,Asia,Ind.
+2012,Indonesia,609,Asia,Ind.
+2003,Indonesia,563,Asia,Ind.
+2013,Indonesia,509,Asia,Ind.
+2014,Indonesia,453,Asia,Ind.
+2014,India,108817,Asia,India
+2013,India,99705,Asia,India
+2007,India,83464,Asia,India
+2012,India,80630,Asia,India
+2001,India,74078,Asia,India
+2008,India,72517,Asia,India
+2011,India,72438,Asia,India
+2006,India,64887,Asia,India
+2004,India,63737,Asia,India
+2000,India,61530,Asia,India
+2010,India,58664,Asia,India
+2009,India,55886,Asia,India
+1999,India,55062,Asia,India
+2005,India,53579,Asia,India
+2002,India,44012,Asia,India
+2003,India,42245,Asia,India
+1998,India,40246,Asia,India
+1997,India,31684,Asia,India
+2001,England,8462,Europe,England
+2000,England,7304,Europe,England
+1997,England,6927,Europe,England
+2002,England,6842,Europe,England
+1999,England,6664,Europe,England
+2004,England,6557,Europe,England
+1998,England,6342,Europe,England
+2003,England,6095,Europe,England
+2005,England,5617,Europe,England
+2006,England,4805,Europe,England
+2007,England,4475,Europe,England
+2011,England,3660,Europe,England
+2010,England,3553,Europe,England
+2008,England,3082,Europe,England
+2012,England,3019,Europe,England
+2009,England,2901,Europe,England
+2013,England,2699,Europe,England
+2014,England,2509,Europe,England
+2001,Germany,3190,Europe,Germany
+2004,Germany,2859,Europe,Germany
+2002,Germany,2859,Europe,Germany
+2000,Germany,2699,Europe,Germany
+2005,Germany,2550,Europe,Germany
+2003,Germany,2473,Europe,Germany
+1999,Germany,2444,Europe,Germany
+2006,Germany,2395,Europe,Germany
+1998,Germany,2242,Europe,Germany
+2007,Germany,2100,Europe,Germany
+1997,Germany,2088,Europe,Germany
+2008,Germany,1674,Europe,Germany
+2010,Germany,1639,Europe,Germany
+2011,Germany,1627,Europe,Germany
+2009,Germany,1523,Europe,Germany
+2012,Germany,1446,Europe,Germany
+2013,Germany,1274,Europe,Germany
+2014,Germany,1213,Europe,Germany
+2001,France,3450,Europe,France
+2002,France,2913,Europe,France
+2000,France,2803,Europe,France
+2004,France,2715,Europe,France
+2005,France,2627,Europe,France
+2003,France,2573,Europe,France
+1999,France,2429,Europe,France
+2006,France,2373,Europe,France
+2007,France,2190,Europe,France
+1998,France,2110,Europe,France
+2011,France,2069,Europe,France
+2010,France,1951,Europe,France
+1997,France,1894,Europe,France
+2012,France,1855,Europe,France
+2013,France,1782,Europe,France
+2008,France,1770,Europe,France
+2014,France,1709,Europe,France
+2009,France,1662,Europe,France
+2004,Colombia,2174,South America,Col.
+2002,Colombia,1939,South America,Col.
+2001,Colombia,1881,South America,Col.
+2005,Colombia,1849,South America,Col.
+2006,Colombia,1717,South America,Col.
+2007,Colombia,1631,South America,Col.
+2003,Colombia,1595,South America,Col.
+2000,Colombia,1200,South America,Col.
+2008,Colombia,1199,South America,Col.
+2009,Colombia,1181,South America,Col.
+2010,Colombia,1114,South America,Col.
+2011,Colombia,934,South America,Col.
+2012,Colombia,904,South America,Col.
+1999,Colombia,812,South America,Col.
+2013,Colombia,787,South America,Col.
+2014,Colombia,714,South America,Col.
+1997,Colombia,531,South America,Col.
+1998,Colombia,503,South America,Col.
+2001,Taiwan,2906,Asia,Taiwan
+2000,Taiwan,2712,Asia,Taiwan
+2004,Taiwan,2662,Asia,Taiwan
+2002,Taiwan,2642,Asia,Taiwan
+2006,Taiwan,2537,Asia,Taiwan
+2007,Taiwan,2506,Asia,Taiwan
+2005,Taiwan,2483,Asia,Taiwan
+1999,Taiwan,2209,Asia,Taiwan
+2010,Taiwan,2061,Asia,Taiwan
+2009,Taiwan,2057,Asia,Taiwan
+2003,Taiwan,2039,Asia,Taiwan
+2008,Taiwan,1945,Asia,Taiwan
+2011,Taiwan,1705,Asia,Taiwan
+1998,Taiwan,1693,Asia,Taiwan
+2012,Taiwan,1692,Asia,Taiwan
+2013,Taiwan,1560,Asia,Taiwan
+2014,Taiwan,1505,Asia,Taiwan
+1997,Taiwan,1420,Asia,Taiwan
+2014,China,14871,Asia,China
+2013,China,12632,Asia,China
+2010,China,11242,Asia,China
+2012,China,11077,Asia,China
+2011,China,10849,Asia,China
+2007,China,10761,Asia,China
+2006,China,9451,Asia,China
+2009,China,9223,Asia,China
+2008,China,9141,Asia,China
+2001,China,9076,Asia,China
+2002,China,7576,Asia,China
+2000,China,7489,Asia,China
+2005,China,7113,Asia,China
+2004,China,6583,Asia,China
+1999,China,5775,Asia,China
+2003,China,5608,Asia,China
+1998,China,3880,Asia,China
+1997,China,3206,Asia,China
+2001,Brazil,2367,South America,Brazil
+2004,Brazil,2174,South America,Brazil
+2002,Brazil,2155,South America,Brazil
+2006,Brazil,2039,South America,Brazil
+2003,Brazil,2011,South America,Brazil
+2005,Brazil,1972,South America,Brazil
+2007,Brazil,1938,South America,Brazil
+2000,Brazil,1913,South America,Brazil
+2011,Brazil,1614,South America,Brazil
+2010,Brazil,1613,South America,Brazil
+2012,Brazil,1583,South America,Brazil
+1999,Brazil,1581,South America,Brazil
+2008,Brazil,1483,South America,Brazil
+2009,Brazil,1466,South America,Brazil
+2013,Brazil,1451,South America,Brazil
+2014,Brazil,1352,South America,Brazil
+1998,Brazil,1323,South America,Brazil
+1997,Brazil,1078,South America,Brazil
+2001,Australia,2176,Oceania,Aus.
+2002,Australia,1814,Oceania,Aus.
+2000,Australia,1794,Oceania,Aus.
+1998,Australia,1665,Oceania,Aus.
+1999,Australia,1651,Oceania,Aus.
+2003,Australia,1627,Oceania,Aus.
+2004,Australia,1614,Oceania,Aus.
+1997,Australia,1436,Oceania,Aus.
+2005,Australia,1392,Oceania,Aus.
+2006,Australia,990,Oceania,Aus.
+2007,Australia,695,Oceania,Aus.
+2011,Australia,537,Oceania,Aus.
+2010,Australia,495,Oceania,Aus.
+2008,Australia,482,Oceania,Aus.
+2009,Australia,442,Oceania,Aus.
+2012,Australia,427,Oceania,Aus.
+2014,Australia,424,Oceania,Aus.
+2013,Australia,416,Oceania,Aus.
+2002,Argentina,1644,South America,Arg.
+2005,Argentina,1517,South America,Arg.
+2003,Argentina,1517,South America,Arg.
+2004,Argentina,1507,South America,Arg.
+2006,Argentina,1406,South America,Arg.
+2007,Argentina,1185,South America,Arg.
+2001,Argentina,1106,South America,Arg.
+2008,Argentina,859,South America,Arg.
+2000,Argentina,817,South America,Arg.
+2009,Argentina,753,South America,Arg.
+2010,Argentina,727,South America,Arg.
+2011,Argentina,675,South America,Arg.
+1999,Argentina,627,South America,Arg.
+1998,Argentina,560,South America,Arg.
+1997,Argentina,535,South America,Arg.
+2012,Argentina,525,South America,Arg.
+2013,Argentina,487,South America,Arg.
+2014,Argentina,434,South America,Arg.

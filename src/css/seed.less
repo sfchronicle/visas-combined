@@ -1,0 +1,688 @@
+@import "sfchronicle";
+@import "fonts";
+
+
+@block-graphics: "AntennaExtraLight";
+@bold-graphics: "AntennaMedium";
+@body: "FarnhamText";
+@body-bold: "FarnhamTextBold";
+@title: "FarnhamDisplayLight";
+@banner: "DispatchLight";
+@block: "AntennaExtraLight";
+@bold: "AntennaMedium";
+
+@teachers: #6C85A5;
+@step10: #FFCC32;
+@overall: #889C6B;
+
+@red: #E6A8A8;
+@gray-blue: #6C85A5;
+@dark-gray: #696969;
+@light-gray: #B2B2B2;
+
+@share-gray: lighten(#4F5C70,10%);
+
+body {
+  font-family: @block;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hed {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+  font-family: @block-graphics;
+  font-weight: bold;
+}
+
+.chatter {
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 5px;
+  font-family: @block-graphics;
+  &.mobile {
+    display: none;
+    @media @mobile {
+      display: block;
+    }
+  }
+  @media @mobile {
+    display: none;
+  }
+}
+
+.title {
+  font-family: @title;
+  font-weight: 400;
+  font-size: 30px;
+  // padding: 10px 0;
+  text-align: center;
+}
+.title-img {
+  margin: 10px 0;
+}
+
+#social {
+  text-align: center;
+  margin-bottom:10px;
+
+  a {
+    font-size: 20px;
+    padding: 0 8px;
+    color: @share-gray;
+
+    @include media (max-width $small-breakpoint) {
+      font-size: 1.3em;
+    }
+
+    &:hover {
+      color: @light-gray;
+    }
+  }
+}
+
+.top-photo {
+  height: 100px;
+}
+
+.byline {
+  font-size: 12px;
+  text-align: center;
+  font-family: @body;
+}
+
+// .text {
+//   padding: 20px 0;
+//   font-size: 18px;
+//   font-family: @body;
+// }
+
+header {
+  background: lighten(@teachers,40%);
+  opacity: 0.95;
+  padding: 0 10px;
+  position: relative;
+  z-index: 99;
+  font-family: @bold-graphics;
+
+  .logo {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      margin-top: 10px;
+      height: 20px;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+footer {
+  background: @df-charcoal;
+  opacity: 0.95;
+  padding: 0 10px;
+  position: relative;
+  z-index: 99;
+  margin-top: 10px;
+
+  .logo {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      margin-top: 10px;
+      height: 20px;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
+.credits {
+  margin: 30px auto;
+  text-align: center;
+  font-style: italic;
+  background: lighten(@teachers,40%);
+  font-size: 16px;
+  font-family: @body;
+  .entry {
+    // padding: 5px 0;
+  }
+}
+
+.divider {
+  border-bottom: 1px black solid;
+  height: 2px;
+  &.top {
+    padding-top: 20px;
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px white solid;
+  }
+}
+.divider-text {
+  margin: auto;
+  margin-top: -13px;
+  background: white;
+  width: 150px;
+  text-align: center;
+  font-family: @banner;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &.top {
+    width: 320px;
+    background: darken(@gray-blue,30%);
+    color: white;
+    font-size: 15px;
+    // font-style: italic;
+  }
+}
+.divider-container {
+  background: darken(@gray-blue,30%);
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+.related-stories {
+  height: 100px;
+}
+
+@financial: #D13D59;
+@US: #6C85A5;
+@India: #FFCC32;
+@foreign: #996B7D;
+@tech: #EB8F6A;
+
+// FOR THE SANKEY GRAPH
+
+.chatter {
+  text-align: center;
+  font-size: 18px;
+  @media @mobile {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.divider-div {
+  border-bottom: 1px @df-border-gray solid;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.sankey-header {
+  margin: auto;
+  font-size: 14px;
+}
+
+.hed1, .hed2, .hed3 {
+  display: inline-block;
+  width: 31%;
+}
+.hed1 {
+  text-align: left;
+  margin-left: 7px;
+}
+.hed2 {
+  text-align: center;
+}
+.hed3 {
+  text-align: right;
+  margin-right: 5px;
+}
+
+#sankey-graph {
+  height: 600px;
+  width: 95%;
+  margin: auto;
+  //font-family: 13px sans-serif;
+  @media @mobile {
+    width: 98%;
+    margin: auto;
+  }
+
+  .node rect {
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+    stroke-width: 0;
+  }
+  .node text {
+    font-family: @bold;
+    text-transform: uppercase;
+    @media @mobile {
+      font-size: 10px;
+    }
+  }
+  .node text-part2 {
+    font-family: @bold;
+    text-transform: uppercase;
+  }
+  .link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .7;
+  }
+
+}
+
+// FOR THE BUBBLE MAP
+
+@dark-gray: lighten(#4F5C70,10%);
+@light-gray: #B2B2B2;
+@black: #191919;
+
+@europe: #F79980;
+@asia: #869FBF;
+@namerica: #A2B685;
+@samerica: #FFE64C;
+@oceania: #9C8B9E;
+
+.legend-container {
+  width: 200px;
+  margin: 5px auto;
+  margin-top: -30px;
+  @media @mobile {
+    margin-top: -10px;
+  }
+  border: 2px black solid;
+  border-radius: 5px;
+  font-size: 14px;
+  .legend {
+    font-weight: bold;
+    text-align: center;
+  }
+  .swatch {
+    padding: 7px 10px;
+    border: 1px black solid;
+    &.europe { background: @europe; }
+    &.asia { background: @asia; }
+    &.namerica { background: @namerica; }
+    &.samerica { background: @samerica; }
+    &.oceania { background: @oceania; }
+  }
+  .key {
+    display: inline-block;
+    padding-right: 20px;
+    margin-left: 3px;
+  }
+  background: white;
+  padding: 5px;
+}
+
+.swatch {
+  display: inline-block;
+  text-align: center;
+  content-align: center;
+  font-size: 12px;
+  padding: 0 3px;
+  font-weight: bold;
+  border-radius: 2px;
+  //margin-bottom: 4px;
+  margin-right: 5px;
+  height: 10px;
+  width: 10px;
+  //margin: auto;
+}
+
+
+.outer {
+  border-top: 1px solid @df-border-gray;
+  border-bottom: 1px solid @df-border-gray;
+  padding: 20px 0;
+}
+
+.hed {
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.chatter {
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.chart {
+  width: 600px;
+  margin: auto;
+  @media @tablet {
+    width: 500px;
+  }
+  @media @mobile {
+    width: 100%;
+  }
+
+  &.clickable {
+    .node {
+      cursor: pointer;
+    }
+
+    .note {
+      display: block;
+    }
+  }
+}
+
+.chart-hed, .bars-hed {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 5px;
+  @media @mobile {
+    margin: 0 5px;
+    font-size: 23px;
+  }
+}
+.chart-chatter {
+  text-align: center;
+  font-size: 14px;
+  font-family: @df-serif;
+}
+
+.table {
+  width: 268px;
+  display: inline-block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background: @df-off-white;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid @df-light-gray;
+  border-radius: 5px;
+  white-space: nowrap;
+
+  &.show {
+    display: block;
+  }
+
+  &.flip {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.controls {
+  padding-top: 10px;
+  text-align: center;
+  display: block;
+  padding-left: 20px;
+}
+.start, .pause {
+  border-radius: 7px;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  color: @dark-gray;
+  background: @light-gray;
+  padding: 5px 10px 4px 10px;
+
+  &:hover {
+    background: @dark-gray;
+    color: white;
+  }
+
+  &.selected {
+    color: @black;
+    cursor: default;
+    background: @dark-gray;
+  }
+}
+
+.bubbles {
+  text-align: center;
+  position: relative;
+  //margin-top: -30px;
+}
+.dropdown {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 5px;
+
+  select {
+    margin-left: 3px;
+    width: 100px;
+  }
+}
+
+.note {
+  display: none;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  .fa {
+    margin-right: 10px;
+  }
+}
+
+.node {
+  font-size: 13px;
+}
+
+.info {
+  color: white;
+  background: @dark-gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.table-container {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.table {
+  width: 100%;
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  .source {
+    border-top: 1px solid @df-light-gray;
+    margin-top: 10px;
+  }
+
+  .source, .credit {
+    font-size: 11px;
+    text-align: right;
+  }
+}
+
+.scroll {
+  display: none;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5px;
+
+  &.show {
+    display: block;
+  }
+}
+
+.source {
+  padding-top: 10px;
+}
+.source, .credit {
+  font-size: 11.5px;
+  color: @df-middle-gray;
+  text-transform: uppercase;
+}
+
+.lcas-chart-container {
+  .legend {
+    font-size: 12px;
+    //text-align: center;
+    border: 1px solid @black;
+    border-radius: 6px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 10px;
+    @media @mobile {
+      margin-bottom: 15px;
+    }
+    padding: 5px;
+    .private-swath, .US-swath, .India-swath, .foreign-swath, .tech-swath {
+      height: 14px;
+      width: 14px;
+      //margin: 4px auto;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+     .private-swath {
+      margin-top: 5px;
+      background: @tech;
+    }
+    .US-swath {
+      background: @US;
+    }
+    .India-swath {
+      background: @India;
+    }
+    .foreign-swath {
+      background: @foreign;
+    }
+    .text {
+      width: 250px;
+      padding-left: 20px;
+      vertical-align: text-top;
+    }
+  }
+
+}
+
+.button-container {
+  text-align: center;
+  .button {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    color: white;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 2px;
+    margin-bottom: 10px;
+    &.active {
+      border: 2px solid @black;
+    }
+    &.workers {
+      background: @US;
+    }
+    &.lcas {
+      background: @US;
+    }
+    @media @mobile {
+      width: 45%;
+      font-size: 12px;
+    }
+  }
+}
+
+.bar-title {
+  float: left;
+  font-size:12px;
+  font-weight: bold;
+  width: 20%;
+  margin-top:3px;
+  @media @mobile {
+    margin-left: 5px;
+    width: 27%;
+    font-weight: normal;
+  }
+}
+
+.lcas-chart, .workers-chart {
+  display: none;
+  max-width: 95%;
+  @media @mobile {
+    max-width: 100%;
+  }
+  &.active {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+  }
+}
+
+.bar-container {
+  clear: left;
+  text-align: left;
+  padding-top: 2px;
+  width: 80%;
+  @media @mobile {
+    width: 70%;
+  }
+
+  .filed-bar, .workers-bar {
+    height: 16px;
+    display: block;
+    margin: 2px 0;
+  }
+  .workers-text, .lca-text {
+    font-size: 12px;
+    float: right;
+    margin-right: -60px;
+  }
+  .workers-text {
+    &.Deloitte {
+      margin-right: 20px;
+      color: white;
+    }
+  }
+  .lca-text {
+    &.Infosys {
+      margin-right: 20px;
+      color: white;
+    }
+  }
+  .Tax {
+    background: @financial;
+  }
+  .US-based {
+    background: @US;
+  }
+  .India-based {
+    background: @India;
+  }
+  .Foreign-based {
+    background: @foreign;
+  }
+  .Private {
+    background: @tech;
+  }
+}
+
+&.up::after, &.down::after {
+  // position: absolute;
+  color: @df-dark-gray;  // color: rgb(188, 92, 35);
+  font-size: 0.7em;
+  // text-align: right;
+  margin-left: 4px;
+}
+&.up::after {
+  content: "\25B2";
+  padding-top: 0.2em;
+}
+&.down::after {
+  content: "\25BC";
+  padding-top: 0.2em;
+}

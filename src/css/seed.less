@@ -41,6 +41,7 @@ body {
   text-align: center;
   font-family: @block-graphics;
   font-weight: bold;
+
 }
 
 .special-head {
@@ -84,9 +85,14 @@ body {
 }
 
 .text {
-  padding: 20px 0;
   font-size: 18px;
   font-family: @body;
+  @media @mobile {
+    padding: 0 5px;
+  }
+  @media @tablet {
+    padding: 0 15px;
+  }
 }
 
 #social {
@@ -135,10 +141,22 @@ header {
   .logo {
     float: left;
     margin-right: 10px;
-
     img {
       margin-top: 10px;
       height: 20px;
+    }
+    @media @mobile {
+      display: none;
+    }
+  }
+  .mobile-logo {
+    display: none;
+    @media @mobile {
+      display: inline;
+    }
+    img {
+      margin-top: 10px;
+      height: 18px;
     }
   }
 
@@ -447,7 +465,7 @@ footer {
   padding-bottom: 5px;
   @media @mobile {
     margin: 0 5px;
-    font-size: 23px;
+    font-size: 20px;
   }
 }
 .chart-chatter {

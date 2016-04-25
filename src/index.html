@@ -18,12 +18,9 @@
         <a class="logo" href="http://www.sfchronicle.com" target="_blank">
           <img src="./assets/sf_logo_black.png">
         </a>
+        <div class="special-head">Special report</div>
       </header>
-
-      <div class="divider-container">
-        <div class="top divider"></div>
-        <div class="top divider-text">In-depth report</div>
-      </div>
+      <div class="top divider"></div>
 
       <div class="title-container">
         <div class="title">H1-B Visas</div>
@@ -44,10 +41,121 @@
       <div class="byline">By Joaquin Palomino and Emma O'Neill</div>
       <div class="byline">April 22, 2015</div>
 
+      <div class="text">
+        <p>Before hiring a foreign worker on an H-1B visa, an employer must submit a Labor Condition Application (LCA) with the U.S. Department of Labor, which details the position the company hopes to fill, the prevailing wage for the job, and the pay being offered to the prospective worker. The intent is to ensure that overseas employees will be paid a fair wage if they receive a visa.
+
+        <p>More than one employee can be attached to a LCA, and there’s no limit to how many a company can submit. As a result, the amount LCA’s accepted by the Department of Labor often far exceeds the amount of H-1B visas issued.
+
+        <p>Over the years, the number of approved LCA’s steadily increased. In 2008, the federal government certified fewer than 110,000 applications for roughly 240,000 workers, according to a Chronicle analysis of federal Department of Labor data. Last year, more than 530,000 LCA application were approved for 1.14 million workers (applications certified then withdrawn by the company were not included).
+
+        <p>About 10 percent of the LCA’s approved last year, or 52,500, were filed by Silicon Valley and San Francisco companies, which overwhelmingly sought high-paid computer programmers and other similar tech workers for positions.
+      </div>
+
+      <div class="outer">
+
+        <div class="chart-hed">
+          Which Silicon Valley and San Francisco companies pursue H-1B workers
+        </div>
+
+        <div class="divider-div"></div>
+
+        <div class="sankey-header">
+          <div class="hed1">visas requested by County</div>
+          <div class="hed2">by Company</div>
+          <div class="hed3">for Salary</div>
+        </div>
+
+        <div id="sankey-graph"></div>
+
+        <div class="source">
+          <em>Source: <a href="https://www.foreignlaborcert.doleta.gov/performancedata.cfm">Office of Foreign Labor Certification data</a></em>
+        </div>
+    </div>
+
+    <div class="text">
+      <p>A handful of major firms filled out the majority of the region’s LCA applications. The tax and financial services giant Deloitte and its subsidiaries submitted LCA applications for 10,160 workers locally. Apple hoped to fill 8,650 positions with foreign professionals, most based at its Cupertino campus. And both Facebook and Google requested about 2,240 workers each.
+
+      <p>By county, Santa Clara sought the most H-1B workers in the Bay Area. By city, San Francisco just edged out San Jose, submitting LCA applications for 23,900 individuals.
+
+      <p>Not every major Bay Area tech firm tried to recruit high numbers of H-1B workers. Salesforce, for example, aimed to fill roughly 430 position in San Francisco. Twitter submitted applications for just 350 foreign professionals in the Bay Area.
+
+      <p>It’s unclear how many positions at major companies were filled by India-based subcontracting firms. Such outfits have become major players in bringing H-1B workers into the United States, hiring pools of workers on behalf of other companies.
+      <p>Tata, Wipro, Infosys and HCL are some of the largest outsourcing companies based overseas. Some have accused them of gaming the H-1B visa system by flooding the Department of Labor with LCA applications, thus increasing their odds of obtaining H-1B visas via the computerized lottery used to distribute them.
+    </div>
+
+    <div class="outer">
+
+    <div class="bars-hed">The role of India-based outsourcing companies in securing H-1B visas</div>
+
+      <div class="lcas-chart-container">
+
+        <div class="button-container">
+
+          <div class="button workers"
+          ng-click="selectedTable = 'workers'; sortTable('order1')"
+          ng-class="{active:selectSort == 'order1',
+                    up: lastSort == 'order1' && sortOrder == -1,
+                    down: lastSort == 'order1' && sortOrder == 1 }">Workers requested</div>
+          <div class="button lcas"
+          ng-click="selectedTable = 'lcas'; sortTable('order2')"
+          ng-class="{active:selectSort == 'order2',
+                    up: lastSort == 'order2' && sortOrder == -1,
+                    down: lastSort == 'order2' && sortOrder == 1 }">LCAs filed</div>
+
+        </div>
+
+        <div class="legend">
+          <div class="private-swath"><div class="legend-text">Private companies</div></div>
+          <div class="US-swath"><div class="legend-text">US-based outsourcing firm</div></div>
+          <div class="India-swath"><div class="legend-text">India-based outsourcing firm</div></div>
+          <div class="foreign-swath"><div class="legend-text">Foreign-based outsourcing firm</div></div>
+        </div>
+
+        <div class="workers-chart" ng-repeat="co in bycompany"
+        ng-class="{'active':selectedTable == 'workers'}">
+          <div class="bar-title">{{co.company}}</div>
+            <div class="bar-container">
+              <div class="workers-bar {{co.company_description}}"
+                ng-style="{ width: {{co.workers_requested/max_len_workers*100}} + '%' }">
+                <div class="workers-text {{co.company}}">{{co.workers_requested}}</div></div>
+            </div>
+        </div>
+
+        <div class="lcas-chart" ng-repeat="co in bycompany"
+        ng-class="{'active':selectedTable == 'lcas'}">
+          <div class="bar-title">{{co.company}}</div>
+            <div class="bar-container">
+              <div class="filed-bar {{co.company_description}}"
+                ng-style="{ width: {{co.lca_filed/max_len_lcas*100}} + '%' }">
+                <div class="lca-text {{co.company}}">{{co.lca_filed}}</div></div>
+            </div>
+        </div>
+
+      </div>
+      <div class="source">
+        <em>Source: <a href="https://www.foreignlaborcert.doleta.gov/performancedata.cfm">Office of Foreign Labor Certification data</a></em>
+      </div>
+
+    </div>
+
+    <div class="text">
+
+      <p>Certain outsourcing companies, such as Wipro, Tata and Infosys, have been the subject of labor and discrimination lawsuits, as well as senate inquiries. They also tend to seek lower-paid and less-skilled workers than other major companies.
+
+      <p>Last year, the average salary of an H1-B worker requested by Tata was about $69,800 per-year, at Wipro it was $70,200, and Infosys’ salaries were $79,100 on average, according to the Chronicle analysis.
+
+      <p>Google, on the other hand, offered an average salary of $130,400 to its H-1B workers. Apple’s H1-B positions paid between $123,700 and $150,700, on average. And Facebook offered roughly $142,000 to the average H-1B applicant.
+
+      <p>As India-based subcontractors have expanded, so has the number of Indian H1-B workers coming into the United States.
+
+      <p>In Fiscal Year 2014, about 161,370 H1-B visas were issued, according to data from the State Department. These included the 85,000 new three-year visas, approved extensions and other positions exempt from the H1-B cap. More than 67 percent went to workers from India – the highest proportion in nearly two decades.
+
+    </div>
+
       <div class="outer">
 
           <div class="chart-hed">
-            Where foreign professionals working in the US came from in <span class="info"></span>
+            Where H-1B recipients came from <span class="info"></span>
           </div>
 
         <div class="chart">
@@ -84,96 +192,14 @@
         </div>
 
         <div class="source">
-          <em>Source: This is the source</em>
+          <em>Source: <a href="https://travel.state.gov/content/visas/en/law-and-policy/statistics/non-immigrant-visas.html">U.S. Department of State, Bureau of Consular Affairs</a></em>
         </div>
       </div>
 
-
-      <div class="outer">
-
-      <div class="bars-hed">LCAs by Company</div>
-
-        <div class="chatter">Outsourcing companies inundate the something with LCA requests. Click on the headings to see how successful this strategy is for them and re-sort the lists.</div>
-
-        <div class="lcas-chart-container">
-
-          <div class="button-container">
-
-            <div class="button workers"
-            ng-click="selectedTable = 'workers'; sortTable('order1')"
-            ng-class="{active:selectSort == 'order1',
-                      up: lastSort == 'order1' && sortOrder == -1,
-                      down: lastSort == 'order1' && sortOrder == 1 }">Workers requested</div>
-            <div class="button lcas"
-            ng-click="selectedTable = 'lcas'; sortTable('order2')"
-            ng-class="{active:selectSort == 'order2',
-                      up: lastSort == 'order2' && sortOrder == -1,
-                      down: lastSort == 'order2' && sortOrder == 1 }">LCAs filed</div>
-
-          </div>
-
-          <div class="legend">
-            <div class="private-swath"><div class="text">Private companies</div></div>
-            <div class="US-swath"><div class="text">US-based outsourcing firm</div></div>
-            <div class="India-swath"><div class="text">India-based outsourcing firm</div></div>
-            <div class="foreign-swath"><div class="text">Foreign-based outsourcing firm</div></div>
-          </div>
-
-          <div class="workers-chart" ng-repeat="co in bycompany"
-          ng-class="{'active':selectedTable == 'workers'}">
-            <div class="bar-title">{{co.company}}</div>
-              <div class="bar-container">
-                <div class="workers-bar {{co.company_description}}"
-                  ng-style="{ width: {{co.workers_requested/max_len_workers*100}} + '%' }">
-                  <div class="workers-text {{co.company}}">{{co.workers_requested}}</div></div>
-              </div>
-          </div>
-
-          <div class="lcas-chart" ng-repeat="co in bycompany"
-          ng-class="{'active':selectedTable == 'lcas'}">
-            <div class="bar-title">{{co.company}}</div>
-              <div class="bar-container">
-                <div class="filed-bar {{co.company_description}}"
-                  ng-style="{ width: {{co.lca_filed/max_len_lcas*100}} + '%' }">
-                  <div class="lca-text {{co.company}}">{{co.lca_filed}}</div></div>
-              </div>
-          </div>
-
-        </div>
-        <div class="source">
-          <em>Source: This is the source</em>
-        </div>
-
-      </div>
-
-        <div class="outer">
-
-          <div class="chart-hed">
-            Where are visa holders in demand?
-          </div>
-
-          <div class="chatter">
-            We map each visa application request in a county by an employer for a given position. Roll over the graph to see what positions employers want to fill with H1-B visa holders.
-          </div>
-
-          <div class="divider-div"></div>
-
-          <div class="sankey-header">
-            <div class="hed1">visas requested by County</div>
-            <div class="hed2">by Company</div>
-            <div class="hed3">for Salary</div>
-          </div>
-
-          <div id="sankey-graph"></div>
-
-          <div class="source">
-            <em>Source: This is the source</em>
-          </div>
-      </div>
 
       <div class="credits">
-          <div class="entry">Joaquin Palomino  &bull; <a>jpalomino@sfchronicle.com</a></div>
-          <div class="entry">Emma O'Neill  &bull; <a>eoneill@sfchronicle.com</a></div>
+          <div class="entry">Joaquin Palomino  &bull; <a href="mailto:jpalomino@sfchronicle.com">jpalomino@sfchronicle.com</a>  &bull; <a href = "https://twitter.com/JoaquinPalomino" target="_blank">@JoaquinPalomino</a></div>
+          <div class="entry">Emma O'Neill  &bull; <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a>   &bull; <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
       </div>
 
       <div class="dont-miss">

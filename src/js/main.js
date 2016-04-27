@@ -303,8 +303,6 @@ var colors = {
 //set up graph in same style as original example but empty
 var graph = {"nodes" : [], "links" : []};
 
-console.log("are we even getting here");
-
 h1bData.forEach(function (d) {
   graph.nodes.push({ "name": d.source });
   graph.nodes.push({ "name": d.target });

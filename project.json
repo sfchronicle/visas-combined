@@ -9,12 +9,12 @@
       "path": ""
     }
   },
-  "title": "H1-B Visas | Special Report",
-  "description": "Check out our great data report",
+  "title": "H-1B Visas | Special Report",
+  "description": "Interactive: See which companies are recruiting H-1B workers in the Bay Area, and where H-1B workers are coming from",
   "url": "http://projects.sfchronicle.com/2016/visas/",
   "slug": "",
   "tags": [],
-  "image": "assets/sharing_bubbles.png",
+  "image": "assets/sharing_bubbles_v2.png",
   "sheets": [],
   "production": false,
   "embedded": true

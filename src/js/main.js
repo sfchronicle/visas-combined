@@ -382,9 +382,9 @@ app.controller("VisaController",["$scope", "$filter", function($scope) {
   $scope.max_len_workers = 153061;
   $scope.max_len_lcas = 33425;
 
-  $scope.selectedTable = "workers";
-  $scope.lastSort = "order1";
-  $scope.selectSort = "order1";
+  $scope.selectedTable = "lcas";
+  $scope.lastSort = "order2";
+  $scope.selectSort = "order2";
   $scope.sortOrder = 1;
 
   $scope.sortTable = function(selectSort) {
